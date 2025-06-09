@@ -7,6 +7,7 @@ namespace Rector\Config\Level;
 use Rector\CodeQuality\Rector\FunctionLike\SimplifyUselessVariableRector;
 use Rector\Contract\Rector\RectorInterface;
 use Rector\DeadCode\Rector\Array_\RemoveDuplicatedArrayKeyRector;
+use Rector\DeadCode\Rector\Array_\RemoveUselessUnpackArray;
 use Rector\DeadCode\Rector\Assign\RemoveDoubleAssignRector;
 use Rector\DeadCode\Rector\Assign\RemoveUnusedVariableAssignRector;
 use Rector\DeadCode\Rector\Block\ReplaceBlockToItsStmtsRector;
@@ -80,6 +81,7 @@ final class DeadCodeLevel
         // easy picks
         RemoveUnusedForeachKeyRector::class,
         RemoveDuplicatedArrayKeyRector::class,
+        RemoveUselessUnpackArray::class,
         RecastingRemovalRector::class,
         RemoveAndTrueRector::class,
         SimplifyMirrorAssignRector::class,
